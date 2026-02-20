@@ -1,0 +1,142 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(120deg, #6a11cb, #d69020);
+  min-height: 100vh;
+}
+
+/* Navbar */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: rgba(255, 255, 255, 0.15);
+  color: rgb(255, 255, 255);
+  backdrop-filter: blur(10px);
+}
+
+.nav button {
+  margin-left: 10px;
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Page animation */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page {
+  animation: fadeSlideUp 0.5s ease;
+}
+
+/* Card */
+.card {
+  background: rgb(204, 39, 39);
+  width: 420px;
+  margin: 50px auto;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0px 15px 30px rgb(255, 255, 255);
+  animation: fadeSlideUp 0.6s ease;
+}
+
+.card.wide {
+  width: 90%;
+  max-width: 900px;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form */
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #6e49c6;
+  box-shadow: 0 0 8px rgba(37, 117, 252, 0.4);
+}
+
+/* Buttons */
+button {
+  padding: 8px 14px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: #3725fc;
+  color: white;
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button.danger {
+  background: #e33434;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background: #f3f3f3;
+}
+
+tbody tr {
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+tbody tr:hover {
+  background: #ffffff;
+  transform: scale(1.01);
+}
+
+/* Empty state */
+.empty {
+  text-align: center;
+  color: #777;
+}
